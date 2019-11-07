@@ -19,7 +19,7 @@ RUN apt-get update && \
       zip \
     && add-apt-repository ppa:jonathonf/python-3.6 \
     && apt-get update \
-    && apt-get install python3.6
+    && apt-get install python3.6 \
     && rm -rf /var/lib/apt/lists/* \
     && pip3 install awscli \
     && pip3 install aws-sam-cli
