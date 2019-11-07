@@ -18,10 +18,11 @@ RUN apt-get update && \
       python3-setuptools \
       zip \
     && rm -rf /var/lib/apt/lists/* \
-    && pip3 install awscli
+    && pip3 install awscli \
+    && pip3 install aws-sam-cli
 
-RUN pip3 install --user aws-sam-cli
 RUN dotnet tool install -g Amazon.Lambda.Tools
 
 COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["chmod +x /entrypoint.sh"]
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
