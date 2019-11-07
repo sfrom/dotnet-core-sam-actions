@@ -18,9 +18,9 @@ RUN apt-get update && \
       python3-setuptools \
       zip \
     && apt-get install -y software-properties-common \
-    && add-apt-repository ppa:jonathonf/python-3.6 \
+    && add-apt-repository add-apt-repository ppa:deadsnakes/ppa \
     && apt-get update \
-    && apt-get install python3.6 \
+    && apt-get install python3.7 \
     && rm -rf /var/lib/apt/lists/* \
     && pip3 install awscli \
     && pip3 install aws-sam-cli
