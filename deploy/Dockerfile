@@ -13,10 +13,13 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       groff \
       jq \
-      python3.6 \
+      python \
       python3-pip \
       python3-setuptools \
       zip \
+    && add-apt-repository ppa:jonathonf/python-3.6 \
+    && apt-get update \
+    && apt-get install python3.6
     && rm -rf /var/lib/apt/lists/* \
     && pip3 install awscli \
     && pip3 install aws-sam-cli
