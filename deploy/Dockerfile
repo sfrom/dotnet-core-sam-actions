@@ -20,6 +20,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/* \
     && pip3 install awscli
 
+RUN pip3 install --user aws-sam-cli
 RUN dotnet tool install -g Amazon.Lambda.Tools
 
 COPY entrypoint.sh /entrypoint.sh
