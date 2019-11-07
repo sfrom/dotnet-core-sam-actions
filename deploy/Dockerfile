@@ -13,7 +13,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       groff \
       jq \
-      python \
+      python3.7 \
       python3-pip \
       python3-setuptools \
       zip \
