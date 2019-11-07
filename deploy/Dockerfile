@@ -17,6 +17,7 @@ RUN apt-get update && \
       python3-pip \
       python3-setuptools \
       zip \
+    && apt-get install -y software-properties-common \
     && add-apt-repository ppa:jonathonf/python-3.6 \
     && apt-get update \
     && apt-get install python3.6 \
