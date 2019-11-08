@@ -2,6 +2,8 @@
 : ${AWS_REGION:=eu-central-1}
 : ${DOTNET_LAMBDA_PACKAGE_NAME:=latest.zip}
 export PATH="$PATH:/root/.dotnet/tools"
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
 cd "${DOTNET_LAMBDA_WORKING_DIR:-.}"
 sam build -t ./all-template.yml
 #dotnet lambda package $DOTNET_LAMBDA_PACKAGE_NAME
