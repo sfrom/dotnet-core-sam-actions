@@ -1,9 +1,8 @@
 #!/bin/sh
 : ${AWS_REGION:=eu-central-1}
-: ${DOTNET_LAMBDA_PACKAGE_NAME:=latest.zip}
 export PATH="$PATH:/root/.dotnet/tools"
 cd "${DOTNET_LAMBDA_WORKING_DIR:-.}"
-dotnet lambda deploy-serverless SfrCustomAuthorizerActionsStack
+dotnet lambda deploy-serverless $DOTNET_LAMBDA_STACK_NAME
 #aws s3 cp --only-show-errors $DOTNET_LAMBDA_PACKAGE_NAME s3://$DOTNET_LAMBDA_S3_LOCATION/$DOTNET_LAMBDA_PACKAGE_NAME
 #aws lambda update-function-code \
 #  --region $AWS_REGION \
