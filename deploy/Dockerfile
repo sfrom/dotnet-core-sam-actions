@@ -5,10 +5,6 @@ LABEL "com.github.actions.description"="Run dotnet lambda deploy"
 LABEL "com.github.actions.icon"="play-circle"
 LABEL "com.github.actions.color"="purple"
 
-LABEL "repository"="https://github.com/evalytica/dotnet-lambda-actions"
-LABEL "homepage"="https://github.com/evalytica/dotnet-lambda-actions"
-LABEL "maintainer"="Evalytica DevOps Team <evalytica@veradigmhealth.com>"
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       groff \
